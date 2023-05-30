@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-int verStr(char str[], char subStr[])
+int verificarStr
+(char str[], char subStr[])
 {
     if (strlen(subStr) > strlen(str))
     {
@@ -12,7 +13,8 @@ int verStr(char str[], char subStr[])
     {
         return 1;
     }
-    return verStr(str + 1, subStr);
+    return verificarStr
+    (str + 1, subStr);
 }
 
 int main(int argc, char const *argv[])
@@ -25,7 +27,8 @@ int main(int argc, char const *argv[])
     printf("Digite a SubFrase: ");
     fgets(subStr, 49, stdin);
 
-    if (verStr(str, subStr))
+    if (verificarStr
+    (str, subStr))
     {
         printf("\n%s Eh uma SubString de '%s\n", subStr, str);
     }
